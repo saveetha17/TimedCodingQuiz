@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets\style.css">
     <title>Timed Coding Quiz</title>
 </head>
+
 <body>
     <header class="header">
         <div class="coding">
-        <h1 class="h1">Coding Quiz Game</h1>
-        <p>Try to answer the following questions within the time limit to get high scores</p>
-        <button class="button">Start Game</button>
+            <h1 class="h1">Coding Quiz Game</h1>
+            <p>Try to answer the following questions within the time limit to get high scores</p>
+            <button class="button-start btn btn-secondary">Start Game</button>
         </div>
         <div class="scores">
             <a href="#" class="a">View High scores</a>
         </div>
-        <div class="timer" id="timer">
-            <p class="p">Time Left : 60</p>
+        <div class="timer">
+            <p class="p">Time Left : <span id="timer">60</span></p>
         </div>
     </header>
-    <section>
-
+    <section class="text-center container" id="quizContainer">
+        <h4 id="questions"> </h4>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-success" id="option1"></button>
+            <button id="option2"></button>
+            <button id="option3"></button>
+            <button id="option4"></button>
+        </div>
+        <p id="answer"> </p>
     </section>
+    <section id="displayScore">
+        <h3 id="finalScores"></h3>
+        <label>
+            Enter User Initials
+        </label>
+        <input type="text" placeholder="Enter User Initials">
+        <button id="saveUserInformation">Save</button>
+    </section>
+    <script src="./assets/script.js"></script>
 </body>
+
 </html>
